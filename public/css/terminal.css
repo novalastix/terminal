@@ -1,7 +1,8 @@
 :root
 {
-    --terminal-bg: #131216;
-    --terminal-text: #4cfc5a;
+    --terminal-bg: #121615;
+    --terminal-text: #4cfcd0;
+    --accent: #ecd68480;
     --link-text: #4ce2fc;
     --margin-bg: #470000;
     --margin-text: #fc4c4c;
@@ -21,40 +22,33 @@ html, body
     height: 100%;
 }
 
-::selection
-{
-    background: rgb(from var(--terminal-text) r g b / 0.5);
-}
-
 body
 {
     background-color: var(--terminal-bg);
-    background: var(--terminal-bg) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAG0lEQVQYV2P8//+/FCMj4zMGJMCIzIGxKRQEAJgPBAbJqUVTAAAAAElFTkSuQmCC);
+    background-image: radial-gradient(rgba(124, 249, 182, 0.1) 1px, transparent 1px);
+    background-size: 6px 6px;
     color: var(--terminal-text);
 
     font-family: 'Courier Prime', monospace;
     font-variant-ligatures: none;
     font-size: 20px;
-
 }
 
-.left{float:left}
-.right{float:right}
 
 header, footer
 {
     position: fixed;
     display: block;
+    
     left: 0;
     right: 0;
     width: 100%;
     height: var(--margin);
     line-height: var(--margin);
 
-    padding: 0 1em;
+    border: 2px solid var(--accent);
 
-    background-color: var(--margin-bg);
-    color: var(--margin-text);
+    padding: 0 1em;
 }
 header{top: 0;}
 footer{bottom: 0;}
@@ -89,12 +83,6 @@ main a:hover, main a:focus{
     background-color: var(--terminal-text);
     color: var(--terminal-bg);
 }
-/* main a:focus::before, main a:hover::before{
-    content: '\003E\00A0';
-}
-main a:focus::after, main a:hover::after{
-    content: '\00A0\003C';
-} */
 
 p
 {
