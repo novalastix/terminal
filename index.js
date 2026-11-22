@@ -1,7 +1,6 @@
-import { express, Router } from 'express';
-import { path } from 'path';
-
-const router = Router();
+const express = require('express');
+const path = require('path');
+const defaultRoute = require('./routes/default')
 const app = express();
 const port = 8080;
 
@@ -11,13 +10,7 @@ app.set('view engine','ejs');
 //Set path for static content to /public
 app.use(express.static(path.join(__dirname,'public')));
 
-app.get('/',(req,res) =>
-{
-    res.render('index',
-    {
-        title: 'Admin Terminal'
-    });
-});
+app.use('/',defaultRoute);
 
 app.listen(port, () => 
     {
