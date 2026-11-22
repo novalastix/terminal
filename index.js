@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
-const defaultRoute = require('./routes/default')
+const routes = {
+    default: require('./routes/default')
+} ;
 const app = express();
 const port = 8080;
 
@@ -10,7 +12,7 @@ app.set('view engine','ejs');
 //Set path for static content to /public
 app.use(express.static(path.join(__dirname,'public')));
 
-app.use('/',defaultRoute);
+app.use('/',routes.default);
 
 app.listen(port, () => 
     {

@@ -5,7 +5,7 @@ const router = express.Router();
 router.get('/', (req,res) => {
     res.render('index',
     {
-        title: 'Admin Terminal 2'
+        title: 'Admin Terminal'
     });
 });
 
