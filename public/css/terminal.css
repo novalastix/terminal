@@ -1,16 +1,14 @@
 :root
 {
-    --terminal-bg: #121615;
-    --terminal-text: #4cfcd0;
-    --accent: #ecd68480;
-    --link-text: #4ce2fc;
-    --margin-bg: #470000;
-    --margin-text: #fc4c4c;
+    --background: #010907;
+    --primary: #64f2e1;
+    --accent: #ace391;
 
     --margin: 2em;
 }
 
-*, *::before, *::after {
+*, *::before, *::after
+{
     box-sizing: border-box;
 }
 
@@ -24,18 +22,66 @@ html, body
 
 body
 {
-    background-color: var(--terminal-bg);
-    background-image: radial-gradient(rgba(124, 249, 182, 0.1) 1px, transparent 1px);
+    padding: 2em;
+
+    background-color: var(--background);
+    background-image: radial-gradient(rgb(from var(--primary) r g b / 0.05) 1px, transparent 1px);
     background-size: 6px 6px;
-    color: var(--terminal-text);
+    color: var(--primary);
 
     font-family: 'Courier Prime', monospace;
     font-variant-ligatures: none;
     font-size: 20px;
 }
 
+header
+{
+    display: flex;
+    gap: 1em;
 
-header, footer
+    color: var(--accent);
+}
+header .left, header .right
+{
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    padding: 1em;
+}
+header .right
+{
+    flex: 1;
+}
+
+main
+{
+    margin-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+}
+
+nav
+{
+    border-right: 2px solid rgb(from var(--primary) r g b / 0.5);
+}
+nav ul li
+{
+    list-style-type: none;
+}
+
+main section
+{
+    flex: 1;
+}
+
+main form
+{
+    flex: 0 0 100%;
+}
+
+
+/* header, footer
 {
     position: fixed;
     display: block;
@@ -66,13 +112,13 @@ main
     padding: 1em 0;
 
 
-    scrollbar-color: rgb(from var(--terminal-text) r g b / 0.5) var(--terminal-bg);
-}
+    scrollbar-color: rgb(from var(--primary) r g b / 0.5) var(--background);
+} */
 
 a
 { 
     text-decoration: underline;
-    color: var(--terminal-text);
+    color: var(--primary);
 }
 a:hover, a:focus{
     text-decoration: none;
@@ -80,8 +126,8 @@ a:hover, a:focus{
     font-weight: bolder;
 }
 main a:hover, main a:focus{
-    background-color: var(--terminal-text);
-    color: var(--terminal-bg);
+    background-color: var(--primary);
+    color: var(--background);
 }
 
 p
@@ -93,7 +139,7 @@ hr
 {
     display: block; height: 1px;
     border: 0;
-    border-top: 4px dashed var(--terminal-text);
+    border-top: 4px dashed var(--primary);
     margin: 1em 0;
     padding: 0;
 }
@@ -103,7 +149,7 @@ blockquote
     margin: 1em;
     padding-left: 0.5em;
     border: 0;
-    border-left: 4px solid var(--terminal-text);
+    border-left: 4px solid var(--primary);
 }
 
 ul li
@@ -114,7 +160,7 @@ ul li
 code
 {
     font: inherit;
-    background-color: rgb(from var(--terminal-text) r g b / 0.25);
+    background-color: rgb(from var(--primary) r g b / 0.25);
     padding: 2px 5px;
     border-radius: 5px;
     letter-spacing: 2px;
@@ -124,21 +170,21 @@ table
 {
     font: inherit;
     border-collapse: collapse;
-    border: 2px solid var(--terminal-text);
+    border: 2px solid var(--primary);
     margin: 1em 0;
 }
 table thead
 {
-    background-color: rgb(from var(--terminal-text) r g b / 0.25);
+    background-color: rgb(from var(--primary) r g b / 0.25);
 }
 table td, table th
 {
     padding: 0.25em;
-    border: 2px dashed rgb(from var(--terminal-text) r g b / 0.25);
+    border: 2px dashed rgb(from var(--primary) r g b / 0.25);
 }
 table tr:nth-child(odd) td
 {
-    background-color: rgb(from var(--terminal-text) r g b / 0.1);
+    background-color: rgb(from var(--primary) r g b / 0.1);
 }
 
 table:not(:has(thead)), table:not(:has(thead)) td, table:not(:has(thead)) th
