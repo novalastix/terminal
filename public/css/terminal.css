@@ -38,46 +38,56 @@ header
 {
     display: flex;
     gap: 1em;
-
+}
+header section
+{
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    background-color: rgb(from var(--primary) r g b / 0.05);
+    padding: 1em;
     color: var(--accent);
 }
-header .left, header .right
+.icon
 {
-    border: 2px solid var(--primary);
-    border-radius: 5px;
-    padding: 1em;
+    flex: 0 0 auto;
 }
-header .right
+.status
 {
-    flex: 1;
+    flex: 1 0 0;
 }
 
-main
-{
-    margin-top: 1em;
-    display: flex;
-    flex-wrap: wrap;
-    border: 2px solid var(--primary);
-    border-radius: 5px;
-}
+
 
 nav
 {
+    flex: 0 0 auto;
     border-right: 2px solid rgb(from var(--primary) r g b / 0.5);
+}
+nav ul
+{
+    padding: 1em;
+    margin: 0;
 }
 nav ul li
 {
     list-style-type: none;
+    text-align: right;
 }
 
-main section
+main
 {
-    flex: 1;
+    border: 3px solid var(--primary);
+    border-radius: 5px;
+
+    flex: 1 0 51%;
+    padding: 1em;
 }
 
-main form
+form
 {
     flex: 0 0 100%;
+    
+    border: 3px solid var(--primary);
 }
 
 

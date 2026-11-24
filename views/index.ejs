@@ -25,25 +25,26 @@
     </head>
     <body>
         <header>
-            <div class="left">???</div>
-            <div class="right">Administration Terminal</div>
+            <section class="icon">???</section>
+            <section class="status">Administration Terminal</section>
         </header>
-        <main id="terminal">
+        <main>
             <nav>
                 <ul>
                     <li>Home</li>
                     <li>Sample</li>
                 </ul>
             </nav>
-            <section>
+            <section id="terminal">
                 Welcome to your administration terminal...
             </section>
-            <form id="terminal-input">
-                <label id="prompt">></label>
-                <input type="text" name="input" id="input" autocomplete="off">
-                <input type="submit" id="submit" style="display:none">
-            </form>
         </main>
+        
+        <form id="terminal-input">
+            <label id="prompt">></label>
+            <input type="text" name="input" id="input" autocomplete="off">
+            <input type="submit" id="submit" style="display:none">
+        </form>
         <footer>
             <div class="left"><a href="/">system</a> /</div>
             <div class="right">Satellite Relay Network [X-1 Research Station]</div>
